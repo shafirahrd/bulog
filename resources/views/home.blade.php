@@ -51,7 +51,7 @@
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                     
-                                    <a href="about.php" class="btn orange-border">Tentang Kami</a>
+                                    <a href="{{ url('about') }}" class="btn orange-border">Tentang Kami</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
