@@ -37,3 +37,8 @@ Route::get('/galeri', function () {
 Route::get('/contact', function () {
     return view('user.contact');
 });
+
+
+Route::get('/daftar', function (){
+	return view('user.daftar');
+});
