@@ -12,5 +12,33 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('admin-galeri', 'GaleriController@index');
+
+//Route::get('/about', 'HomeController@about');
+Route::get('/about', function () {
+    return view('user.about');
+});
+
+Route::get('/produk', function () {
+    return view('user.produk');
+});
+
+Route::get('/rpk', function () {
+    return view('user.rpk');
+});
+
+Route::get('/galeri', function () {
+    return view('user.galeri');
+});
+
+Route::get('/contact', function () {
+    return view('user.contact');
+});
+
+
+Route::get('/daftar', function (){
+	return view('user.daftar');
 });
