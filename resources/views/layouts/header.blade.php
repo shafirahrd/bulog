@@ -1,3 +1,5 @@
+	<link rel="stylesheet" href="css/custom.css">
+
 	<header class="site-header">
 	    <div class="nav-bar">
 	        <div class="container">
@@ -8,13 +10,14 @@
 	                    </div><!-- .site-branding -->
 
 	                    <nav class="site-navigation d-flex justify-content-end align-items-center">
-	                        <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-	                        	<li><a href="{{ url('') }}">Home</a></li>
-	                            <li><a href="{{ url('about') }}">Tentang Kami</a></li>
-                                <li><a href="{{ url('produk') }}">Produk</a></li>
-                                <li><a href="{{ url('rpk') }}">RPK</a></li>
-                                <li><a href="{{ url('galeri') }}">Galeri</a></li>
-                                <li><a href="{{ url('contact') }}">Kontak</a></li>
+	                        <ul class="list-inline">
+	                        	<a class="list-inline-item" href="{{ url('') }}">Home</a></li>
+	                            <a class="list-inline-item" href="{{ url('about') }}">Tentang Kami</a></li>
+                                <a class="list-inline-item" href="{{ url('produk') }}">Produk</a></li>
+                                <a class="list-inline-item" href="{{ url('rpk') }}">RPK</a></li>
+                                <a class="list-inline-item" href="{{ url('galeri') }}">Galeri</a></li>
+                                <a class="list-inline-item" href="{{ url('contact') }}">Kontak</a></li>
+                                <a class="list-inline-item" href="{{ url('daftar') }}">Daftar</a></li>
 	                        </ul>
 	                    </nav><!-- .site-navigation -->
 
