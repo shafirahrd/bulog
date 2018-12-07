@@ -18,7 +18,7 @@
     <link href="css/daftar.css" rel="stylesheet" media="all">
 </head>
 
-<body background="images/home1.jpeg">
+<body>
     <div class="page-wrapper bg-dark p-t-100 p-b-50">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
