@@ -25,7 +25,7 @@
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                     
-                                    <a href="#" class="btn orange-border">Tentang Kami</a>
+                                    <a href="{{ url('about') }}" class="btn orange-border">Tentang Kami</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -77,7 +77,7 @@
 
                                 <footer class="entry-footer d-flex flex-wrap align-items-center mt-5">
                                     
-                                    <a href="about.php" class="btn orange-border">Tentang Kami</a>
+                                    <a href="{{ url('about') }}" class="btn orange-border">Tentang Kami</a>
                                 </footer><!-- .entry-footer -->
                             </div><!-- .col -->
                         </div><!-- .row -->
@@ -118,7 +118,7 @@
                         </div><!-- .entry-content -->
 
                         <div class="entry-footer mt-5">
-                            <a href="about.php" class="btn gradient-bg mr-2">Baca Selengkapnya</a>
+                            <a href="{{ url('about') }}" class="btn gradient-bg mr-2">Baca Selengkapnya</a>
                         </div><!-- .entry-footer -->
                     </div><!-- .welcome-content -->
                 </div><!-- .col -->
@@ -233,7 +233,7 @@
 
                                 <div class="entry-footer mt-5">
                                    <div class="buttonharga">
-                                    <a href="produk.php" class="btn gradient-bg mr-2">Selengkapnya</a>
+                                    <a href="{{ url('produk') }}" class="btn gradient-bg mr-2">Selengkapnya</a>
                                 </div><!-- .entry-footer -->
                             </div><!-- .cause-content-wrap -->
 

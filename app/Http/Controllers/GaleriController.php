@@ -41,10 +41,6 @@ class GaleriController extends Controller
 
     public function update(Request $request, $id)
     {
-        // $galeri = Galeri::find($id);
-        // $galeri->nama = $request->get('nama');
-        // $galeri->gambar = $request->get('gambar');
-        // $galeri->save();
         DB::table('galeri')->where('id_galeri', $id)->update($request->all());
 
         return redirect('admin-galeri')->with('success', 'Galeri Foto RPK berhasil diperbarui');
