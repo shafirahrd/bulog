@@ -55,7 +55,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="orange">
-                                    <h4 class="title">Data Galeri</h4>
+                                    <h4 class="title">Galeri Foto RPK</h4>
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
@@ -73,11 +73,8 @@
                                                 <td>{{$listgaleri->nama}}</td>
                                                 <td>{{$listgaleri->gambar}}</td>
                                                 <td class="td-actions text-right">
-                                                    <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" style:"margin: 5%">
+                                                    <a href="{{action('GaleriController@edit', $galeri->id)}}" class="btn btn-primary btn-warning btn-xs">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </a>
-                                                    <a href="{{action('GaleriController@delete', $listgaleri->id_galeri)}}"" class="btn btn-primary btn-warning btn-xs">
-                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                     </a>
                                                 </td>
                                             </tr>

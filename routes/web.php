@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::resource('galeri', 'GaleriController');
 Route::get('admin-galeri', 'GaleriController@index');
-
+Route::get('edit/{id}', 'GaleriController@edit');
+Route::get('edit/{id}', 'GaleriController@update');
+Route::delete('{id}', 'GaleriController@delete');
 //Route::get('/about', 'HomeController@about');
 Route::get('/about', function () {
     return view('user.about');
@@ -36,9 +39,4 @@ Route::get('/galeri', function () {
 
 Route::get('/contact', function () {
     return view('user.contact');
-});
-
-
-Route::get('/daftar', function (){
-	return view('user.daftar');
 });
