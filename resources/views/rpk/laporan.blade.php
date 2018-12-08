@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ url('')}}">
                         <i class="ti-pencil-alt2"></i>
                         <p>Log Out</p>
                     </a>

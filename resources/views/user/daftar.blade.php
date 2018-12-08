@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="css/daftar.css" rel="stylesheet" media="all">
+    <link href="{{ asset('css/daftar.css') }}" rel="stylesheet" media="all">
 </head>
 
 <body class="single-page about-page">
@@ -125,12 +125,9 @@
                         </div>
                     </form>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
-                </div>
-                    </div> 
-                </div>             
-            </div>
+                <br><button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
+                </div> 
+            </div>             
         </div>
     </div>
 
