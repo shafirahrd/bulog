@@ -16,10 +16,13 @@ Route::get('/', function () {
 });
 
 Route::resource('galeri', 'GaleriController');
+Route::get('galeri-create', 'GaleriController@create');
+Route::post('galeri-create', 'GaleriController@store');
 Route::get('admin-galeri', 'GaleriController@index');
-Route::get('edit/{id}', 'GaleriController@edit');
-Route::get('edit/{id}', 'GaleriController@update');
+Route::get('galeri-update/{id}', 'GaleriController@edit');
+Route::post('galeri-update/{id}', 'GaleriController@update');
 Route::delete('{id}', 'GaleriController@delete');
+
 //Route::get('/about', 'HomeController@about');
 Route::get('/about', function () {
     return view('user.about');

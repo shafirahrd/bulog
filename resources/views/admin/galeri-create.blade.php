@@ -43,11 +43,11 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="orange">
-                                    <h4 class="title">Edit Galeri Foto RPK</h4>
+                                    <h4 class="title">Tambah Galeri Foto RPK</h4>
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
-                                    <form class="form-horizontal form-material" action="{{action('GaleriController@update', $id)}}" method = "post">
+                                    <form class="form-horizontal form-material" action="{{'galeri-create'}}" method = "post">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nama</label>
@@ -79,6 +79,3 @@
 @include('admin.parts.footer')
 
 </html>
-
-
-

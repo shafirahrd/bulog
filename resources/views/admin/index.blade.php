@@ -50,12 +50,15 @@
         <div class="main-panel">
             @include('admin.parts.navbar')
             <div class="content">
+            <a href="{{'galeri-create'}}" style="float: left;" class="btn btn-primary waves-effect waves-light m-t-10">
+                <i class="fa fa-plus" aria-hidden="true"></i>  Foto RPK 
+            </a>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="orange">
-                                    <h4 class="title">Data Galeri</h4>
+                                    <h4 class="title">Galeri Foto RPK</h4>
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
@@ -73,7 +76,7 @@
                                                 <td>{{$listgaleri->nama}}</td>
                                                 <td>{{$listgaleri->gambar}}</td>
                                                 <td class="td-actions text-right">
-                                                    <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" style:"margin: 5%">
+                                                    <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
                                                     <a href="{{action('GaleriController@delete', $listgaleri->id_galeri)}}"" class="btn btn-primary btn-warning btn-xs">
