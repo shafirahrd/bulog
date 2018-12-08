@@ -6,16 +6,11 @@
 <body>
 
 <div class="wrapper">
+    <!--@include('rpk.parts.sidebar')-->
     <div class="sidebar" data-background-color="white" data-active-color="danger">
-
-    <!--
-		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
-		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
-	-->
-
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="{{ url('')}}" class="simple-text">
                     RPK BULOG
                 </a>
             </div>
@@ -28,25 +23,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="{{ url('rpk-profil')}}">
                         <i class="ti-user"></i>
                         <p>Profil RPK</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="{{ url('rpk-komoditas')}}">
                         <i class="ti-view-list-alt"></i>
                         <p>Komoditas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="typography.html">
+                    <a href="{{ url('rpk-laporan')}}">
                         <i class="ti-text"></i>
                         <p>Laporan Mingguan</p>
                     </a>
                 </li>
                 <li>
-                    <a href="icons.html">
+                    <a href="">
                         <i class="ti-pencil-alt2"></i>
                         <p>Log Out</p>
                     </a>
@@ -59,13 +54,7 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand">Dashboard RPK Laku Jaya</a>
                 </div>
             </div>
         </nav>
@@ -74,101 +63,51 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-sm-6">
                         <div class="card">
                             <div class="content">
                                 <div class="row">
-                                    <div class="col-xs-5">
+                                    <div class="col-xs-3">
                                         <div class="icon-big icon-warning text-center">
-                                            <i class="ti-server"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Capacity</p>
-                                            105GB
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-success text-center">
                                             <i class="ti-wallet"></i>
                                         </div>
                                     </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Revenue</p>
-                                            $1,345
+                                    <div class="col-xs-9">
+                                        <div class="numbers" style="text-align: left;">
+                                            <p>Hari Minggu, 9 Desember 2018</p>
+                                            Rp 1.000.000,-
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-calendar"></i> Last day
+                                        <i class="ti-calendar"></i> Laporan terakhir
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
+                    <div class="col-sm-6">
                         <div class="card">
                             <div class="content">
                                 <div class="row">
-                                    <div class="col-xs-5">
+                                    <div class="col-xs-3">
                                         <div class="icon-big icon-danger text-center">
-                                            <i class="ti-pulse"></i>
+                                            <i class="ti-server"></i>
                                         </div>
                                     </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Errors</p>
-                                            23
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> In the last hour
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-info text-center">
-                                            <i class="ti-twitter-alt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Followers</p>
-                                            +45
+                                    <div class="col-xs-9">
+                                        <div class="numbers" style="text-align: left;"">
+                                            <p>Sisa Komoditas</p>
+                                            Beras 5Kg : 10 Karung
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <i class="ti-reload"></i> Updated now
+                                        <i class="ti-shopping-cart"></i> Komoditas hampir habis
                                     </div>
                                 </div>
                             </div>
@@ -180,67 +119,19 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Users Behavior</h4>
-                                <p class="category">24 Hours performance</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartHours" class="ct-chart"></div>
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Click
-                                        <i class="fa fa-circle text-warning"></i> Click Second Time
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Updated 3 minutes ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
-
-                                <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="ti-timer"></i> Campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">2015 Sales</h4>
-                                <p class="category">All products including Taxes</p>
+                                <h4 class="title">Statistik Penjualan</h4>
+                                <p class="category">2018</p>
                             </div>
                             <div class="content">
                                 <div id="chartActivity" class="ct-chart"></div>
-
                                 <div class="footer">
-                                    <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                                    </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="ti-check"></i> Data information certified
+                                        <div class="chart-legend">
+	                                        <i class="fa fa-circle text-info"></i> Produk 1
+	                                        <i class="fa fa-circle text-danger"></i> Produk 2
+	                                        <i class="fa fa-circle text-warning"></i> Produk 3
+                                    	</div>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +145,7 @@
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made for <a href="http://www.creative-tim.com">BULOG</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made for <a href="{{ url('')}}">BULOG</a>
                 </div>
             </div>
         </footer>
@@ -264,44 +155,5 @@
 
 
 </body>
-
-    <!--   Core JS Files   -->
-    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--  Checkbox, Radio & Switch Plugins -->
-	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
-
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
-	<script src="assets/js/paper-dashboard.js"></script>
-
-	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-	<script src="assets/js/demo.js"></script>
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'ti-gift',
-            	message: "Selamat datang kembali, Sahabat RPK! Jangan lupa untuk laporan mingguan"
-
-            },{
-                type: 'success',
-                timer: 4000
-            });
-
-    	});
-	</script>
-
+	@include('rpk.parts.foot')
 </html>
