@@ -62,7 +62,7 @@
                             <div class="name">Alamat</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="message" placeholder="Alamat Lengkap"></textarea>
+                                    <textarea class="textarea--style-6" name="alamat" placeholder="Alamat Lengkap"></textarea>
                                 </div>
                             </div>
                         </div>
