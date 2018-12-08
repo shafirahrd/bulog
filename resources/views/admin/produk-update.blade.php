@@ -14,13 +14,13 @@
             </div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
-                    <li class="active">
+                    <li>
                         <a href="{{'admin-galeri'}}">
                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                             <p>Galeri Foto RPK</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="{{'admin-produk'}}">
                             <i class="fa fa-dropbox" aria-hidden="true"></i>
                             <p>Produk RPK</p>
@@ -74,7 +74,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group m-b-0">
-                                           <a href="{{'admin-produk'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
+                                           <a href="{{'/admin-produk'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
                                            <button type="submit" style="float: right;" class="btn btn-danger waves-effect waves-light m-t-10">Simpan</button>
                                         </div>
                                      </form>

@@ -47,13 +47,12 @@
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
-                                    @foreach($galeri as $listgaleri)
                                     <form class="form-horizontal form-material" action="{{action('GaleriController@update', $id)}}" method = "post">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nama</label>
                                              <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="Nama" name="nama" value ="{{$listgaleri->nama}}">
+                                                <input type="text" class="form-control" placeholder="Nama" name="nama">
                                              </div>
                                         </div>
                                         <div class="form-group">
@@ -63,11 +62,10 @@
                                             </div>
                                         </div>
                                         <div class="form-group m-b-0">
-                                           <a href="{{'admin-galeri'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
+                                           <a href="{{'/admin-galeri'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
                                            <button type="submit" style="float: right;" class="btn btn-danger waves-effect waves-light m-t-10">Simpan</button>
                                         </div>
                                      </form>
-                                     @endforeach
                                 </div>
                             </div>
                         </div>
