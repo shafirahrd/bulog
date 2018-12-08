@@ -73,18 +73,6 @@
         </div>
     </div>
 
-    <div class="help-us">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                    <h2>BULOG Divre Jawa Timur</h2>
-
-                    <a class="btn orange-border" href="#">Tentang Kami</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </body>
 </html>
 

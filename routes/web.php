@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-#Route::get('/about', 'HomeController@about');
+//USERS
 Route::get('/about', function (){
 	return view('user.about');
 });
@@ -38,4 +38,13 @@ Route::get('/contact', function (){
 
 Route::get('/daftar', function (){
 	return view('user.daftar');
+});
+
+Route::get('/masuk', function (){
+	return view('user.masuk');
+});
+
+//RPK
+Route::get('/rpk-dashboard', function (){
+	return view('rpk.dashboard');
 });

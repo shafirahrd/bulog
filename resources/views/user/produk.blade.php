@@ -38,7 +38,7 @@
 					}
 					else {
 						while ($row = mysqli_fetch_assoc($result)){
-							$id = $row['id'];
+							$id = $row['id_produk'];
 							$nama = $row['nama'];
 							$deskripsi = $row['deskripsi'];
 							$harga = $row['harga'];

@@ -29,7 +29,7 @@
 					}
 					else {
 						while ($row = mysqli_fetch_assoc($result)){
-							$id = $row['id'];
+							$id = $row['id_galeri'];
 							$nama = $row['nama'];											
 					?>
                 <div class="col-12 col-md-6 col-lg-4 portfolio-item">

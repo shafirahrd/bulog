@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
-
     @include('layouts.head')
-
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
@@ -18,15 +9,25 @@
     <link href="css/daftar.css" rel="stylesheet" media="all">
 </head>
 
-<body>
-    <div class="page-wrapper bg-dark p-t-100 p-b-50">
-        <div class="wrapper wrapper--w900">
-            <div class="card card-6">
-                <div class="card-heading">
-                    <h2 class="title">Daftar RPK</h2>
-                </div>
-                <div class="card-body">
-                    <form method="POST">
+<body class="single-page about-page">
+	@include('layouts.header')
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Daftar RPK</h1>
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .page-header -->
+
+    <div class="news-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="news-content">
+                       <form method="POST">
                         <div class="form-row">
                             <div class="name">KTP</div>
                             <div class="value">
@@ -125,14 +126,15 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-danger" type="submit">Kirim</button>
-                    <button class="btn btn-warning" style="float:right;"><a href="{{ url('') }}">Kembali</a></button>
+                    <button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
                 </div>
+                    </div> 
+                </div>             
             </div>
         </div>
     </div>
 
-</body>
+    @extends('layouts.footer')
 
+</body>
 </html>
-<!-- end document-->
