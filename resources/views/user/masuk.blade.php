@@ -44,7 +44,7 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button class="btn btn-danger" type="submit">Masuk</button>
+                    <button class="btn btn-danger" type="submit"><a href="{{ url('rpk-dashboard') }}">Masuk</a></button>
                     <button class="btn btn-warning" style="float:right;"><a href="{{ url('') }}">Kembali</a></button>
                 </div>
             </div>
