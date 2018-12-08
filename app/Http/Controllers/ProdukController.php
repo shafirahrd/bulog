@@ -29,13 +29,11 @@ class ProdukController extends Controller
         $produk->gambar = $request->get('gambar');
         $produk->save();
 
-        return redirect('admin-produk')->with('success', 'produk Foto RPK berhasil ditambahkan');
+        return redirect('admin-produk')->with('success', 'Produk RPK berhasil ditambahkan');
     }
 
     public function edit($id)
     {
-        // $produk = produk::find($id);
-        //$produk = produk::find($id)->select('id_produk')->where('id_produk', $id)->get();
         $produk = DB::table('produk')->where('id_produk', $id)->first();
 
         return view('admin.produk-update', ['produk' => $produk, 'id' => $id]);
@@ -43,19 +41,15 @@ class ProdukController extends Controller
 
     public function update(Request $request, $id)
     {
-        // $produk = produk::find($id);
-        // $produk->nama = $request->get('nama');
-        // $produk->gambar = $request->get('gambar');
-        // $produk->save();
-        DB::table('produk')->where('id_produk', $id)->update($request->all());
+        DB::table('produk')->where('id_produk', $id)->update($request->except(['_token']));
 
-        return redirect('admin-produk')->with('success', 'produk Foto RPK berhasil diperbarui');
+        return redirect('admin-produk')->with('success', 'Produk RPK berhasil diperbarui');
     }
 
     public function delete($id)
     {
         DB::table('produk')->where('id_produk', $id)->delete();
 
-        return redirect('admin-produk')->with('success', 'produk Foto RPK telah dihapus');
+        return redirect('admin-produk')->with('success', 'Produk RPK telah dihapus');
     }
 }

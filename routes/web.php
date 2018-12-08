@@ -21,7 +21,7 @@ Route::post('galeri-create', 'GaleriController@store');
 Route::get('admin-galeri', 'GaleriController@index');
 Route::get('galeri-update/{id}', 'GaleriController@edit');
 Route::post('galeri-update/{id}', 'GaleriController@update');
-Route::delete('{id}', 'GaleriController@delete');
+Route::get('galeri-delete/{id}', 'GaleriController@delete');
 
 Route::resource('produk', 'ProdukController');
 Route::get('produk-create', 'ProdukController@create');
@@ -29,7 +29,7 @@ Route::post('produk-create', 'ProdukController@store');
 Route::get('admin-produk', 'ProdukController@index');
 Route::get('produk-update/{id}', 'ProdukController@edit');
 Route::post('produk-update/{id}', 'ProdukController@update');
-Route::delete('{id}', 'ProdukController@delete');
+Route::get('produk-delete/{id}', 'ProdukController@delete');
 
 //Route::get('/about', 'HomeController@about');
 Route::get('/about', function () {
@@ -52,15 +52,15 @@ Route::get('/contact', function () {
     return view('user.contact');
 });
 
-Route::get('/daftar', function (){
-	return view('user.daftar');
+Route::get('/daftar', function () {
+    return view('user.daftar');
 });
 
-Route::get('/masuk', function (){
-	return view('user.masuk');
+Route::get('/masuk', function () {
+    return view('user.masuk');
 });
 
 //RPK
-Route::get('/rpk-dashboard', function (){
-	return view('rpk.dashboard');
+Route::get('/rpk-dashboard', function () {
+    return view('rpk.dashboard');
 });

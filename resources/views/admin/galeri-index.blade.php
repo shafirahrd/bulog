@@ -67,9 +67,8 @@
                                                     <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
-                                                    <form action="{{action('GaleriController@delete', $listgaleri->id_galeri)}}" method="post">
-                                                        @csrf
-                                                        <input name="_method" type="hidden" value="DELETE">
+                                                    <form action="{{action('GaleriController@delete', $listgaleri->id_galeri)}}" method="get">
+                                                        {{ csrf_field() }}
                                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                                     </form>
                                                 </td>

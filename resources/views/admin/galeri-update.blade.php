@@ -47,12 +47,13 @@
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
+                                    @foreach($galeri as $listgaleri)
                                     <form class="form-horizontal form-material" action="{{action('GaleriController@update', $id)}}" method = "post">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nama</label>
                                              <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="Nama" name="nama">
+                                                <input type="text" class="form-control" placeholder="Nama" name="nama" value ="{{$listgaleri->nama}}">
                                              </div>
                                         </div>
                                         <div class="form-group">
@@ -66,6 +67,7 @@
                                            <button type="submit" style="float: right;" class="btn btn-danger waves-effect waves-light m-t-10">Simpan</button>
                                         </div>
                                      </form>
+                                     @endforeach
                                 </div>
                             </div>
                         </div>
