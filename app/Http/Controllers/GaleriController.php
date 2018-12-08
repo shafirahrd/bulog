@@ -12,7 +12,7 @@ class GaleriController extends Controller
     {
         $galeri = Galeri::all();
 
-        return view('admin.index', compact('galeri'));
+        return view('admin.galeri-index', compact('galeri'));
     }
 
     public function create()
@@ -32,9 +32,11 @@ class GaleriController extends Controller
 
     public function edit($id)
     {
+        // $galeri = Galeri::find($id);
+        //$galeri = Galeri::find($id)->select('id_galeri')->where('id_galeri', $id)->get();
         $galeri = DB::table('galeri')->where('id_galeri', $id)->first();
 
-        return view('admin.galeri-update', compact('galeri', 'id'));
+        return view('admin.galeri-update', ['galeri' => $galeri, 'id' => $id]);
     }
 
     public function update(Request $request, $id)
@@ -46,5 +48,12 @@ class GaleriController extends Controller
         DB::table('galeri')->where('id_galeri', $id)->update($request->all());
 
         return redirect('admin-galeri')->with('success', 'Galeri Foto RPK berhasil diperbarui');
+    }
+
+    public function delete($id)
+    {
+        DB::table('galeri')->where('id_galeri', $id)->delete();
+
+        return redirect('admin-galeri')->with('success', 'Galeri Foto RPK telah dihapus');
     }
 }

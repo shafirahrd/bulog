@@ -13,35 +13,23 @@
                 </a>
             </div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
+            <ul class="nav">
                     <li class="active">
-                        <a href="{{ url('admin-dashboard') }}">
-                            <i class="material-icons">playlist_add_check</i>
-                            <p>Data Galeri</p>
+                        <a href="{{'admin-galeri'}}">
+                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                            <p>Galeri Foto RPK</p>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin-jadwal') }}">
-                            <i class="material-icons">event</i>
-                            <p>Jadwal</p>
+                        <a href="{{'admin-produk'}}">
+                            <i class="fa fa-dropbox" aria-hidden="true"></i>
+                            <p>Produk RPK</p>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin-pelanggan') }}">
-                            <i class="material-icons">person</i>
-                            <p>Pelanggan</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('admin-instruktur') }}">
-                            <i class="material-icons">group</i>
-                            <p>Instruktur</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('admin-mobil') }}">
-                            <i class="material-icons">directions_car</i>
-                            <p>Mobil</p>
+                        <a href="{{'admin-RPK'}}">
+                            <i class="fa fa-vcard" aria-hidden="true"></i>
+                            <p>Pendaftar RPK</p>
                         </a>
                     </li>
                 </ul>
@@ -79,9 +67,11 @@
                                                     <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
-                                                    <a href="{{action('GaleriController@delete', $listgaleri->id_galeri)}}"" class="btn btn-primary btn-warning btn-xs">
-                                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                    </a>
+                                                    <form action="{{action('GaleriController@delete', $listgaleri->id_galeri)}}" method="post">
+                                                        @csrf
+                                                        <input name="_method" type="hidden" value="DELETE">
+                                                        <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach

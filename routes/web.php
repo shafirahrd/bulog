@@ -23,6 +23,14 @@ Route::get('galeri-update/{id}', 'GaleriController@edit');
 Route::post('galeri-update/{id}', 'GaleriController@update');
 Route::delete('{id}', 'GaleriController@delete');
 
+Route::resource('produk', 'ProdukController');
+Route::get('produk-create', 'ProdukController@create');
+Route::post('produk-create', 'ProdukController@store');
+Route::get('admin-produk', 'ProdukController@index');
+Route::get('produk-update/{id}', 'ProdukController@edit');
+Route::post('produk-update/{id}', 'ProdukController@update');
+Route::delete('{id}', 'ProdukController@delete');
+
 //Route::get('/about', 'HomeController@about');
 Route::get('/about', function () {
     return view('user.about');
