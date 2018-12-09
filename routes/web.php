@@ -40,7 +40,7 @@ Route::get('/produk', function () {
     return view('user.produk');
 });
 
-Route::get('/rpk', function () {
+Route::get('/rpks', function () {
     return view('user.rpk');
 });
 

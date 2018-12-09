@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('layouts.head')
+    @include('layouts.head')'')
 </head>
-
 <body class="single-page about-page">
-	@include('layouts.header')
+    @include('layouts.header')
 
     <div class="page-header">
         <div class="container">
@@ -40,7 +39,7 @@
                         </header>
 
                         <div class="entry-content">
-                         <p>1. Pendaftaran Online klik <a href="{{ url('daftar') }}" style="color:orangered">Disini</a> <br/>
+                         <p>1. Pendaftaran Online klik <a href="#" style="color:orangered">Disini</a> <br/>
 							   &nbsp;&nbsp;&nbsp;Pendaftaran Offline di Kantor Perum BULOG Divre/Subdivre terdekat di kota Anda<br/>
 							2. Mengisi formulir permohonan sebagai sahabat RPK baik online atau offline<br/>
 							3. Melengkapi persyaratan administrasi seperti:<br/>
@@ -52,13 +51,16 @@
 							5. Penetapan menjadi Sahabat RPK<br/>
 							6. Pembelanjaan awal<br/></p>
                         </div>
+
+                        <footer class="entry-footer">
+                            <br/><br/><center><a href="#" class="btn gradient-bg">DAFTAR SEKARANG</a></center>
+                        </footer>
                     </div> 
                    </div>             
             </div>
         </div>
     </div>
 
-    @extends('layouts.footer')
-
+    @include('layouts.footer')
 </body>
 </html>

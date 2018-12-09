@@ -12,7 +12,7 @@
 	                        	<li class="list-inline-item"><a href="{{ url('') }}">Home</a></li>
 	                            <li class="list-inline-item"><a href="{{ url('about') }}">Tentang Kami</a></li>
                                 <li class="list-inline-item"><a href="{{ url('produk') }}">Produk</a></li>
-                                <li class="list-inline-item"><a href="{{ url('rpk') }}">RPK</a></li>
+                                <li class="list-inline-item"><a href="{{ url('rpks') }}">RPK</a></li>
                                 <li class="list-inline-item"><a href="{{ url('galeri') }}">Galeri</a></li>
                                 <li class="list-inline-item"><a href="{{ url('contact') }}">Kontak</a></li>
                                 <li class="list-inline-item"><a href="{{ url('daftar') }}">Daftar</a></li>
