@@ -27,8 +27,8 @@
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="news-content">
-                       <form method="POST">
-                       	{{ csrf_field() }}
+                       <form action="{{'rpk-create'}}" method= "post" enctype="multipart/form-data">
+                       {{ csrf_field() }}
                         <div class="form-row">
                             <div class="name">KTP</div>
                             <div class="value">
@@ -47,7 +47,7 @@
                             <div class="name">Pemilik Toko</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="pemiliktoko" placeholder="Pemilik Toko">
+                                    <input class="input--style-6" type="text" name="pemilik_toko" placeholder="Pemilik Toko">
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             <div class="name">Nama Toko</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="namatoko" placeholder="Nama Toko">
+                                    <input class="input--style-6" type="text" name="nama_toko" placeholder="Nama Toko">
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                             <div class="name">Kota/Kabupaten</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="textarea--style-6" name="kota" placeholder="Kota/Kabupaten"></textarea>
+                                    <input class="input--style-6" type="text" name="kota_kabupaten" placeholder="Kota/Kabupaten">
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                             <div class="name">Kode Pos</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="kodepos" placeholder="Kode Pos">
+                                    <input class="input--style-6" type="text" name="kode_pos" placeholder="Kode Pos">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="name">Nomor HP</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nohp" placeholder="Nomor Ponsel">
+                                    <input class="input--style-6" type="text" name="nomor_hp" placeholder="Nomor Ponsel">
                                 </div>
                             </div>
                         </div>
@@ -103,9 +103,8 @@
                             <div class="name">Unggah Foto Identitas</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="foto_identitas" id="file">
                                     <label class="label--file" for="file">Choose file</label>
-                                    <span class="input-file__info">No file chosen</span>
                                 </div>
                                 <div class="label--desc">Upload Foto Identitas (KTP/SIM). Maksimal 50 MB</div>
                             </div>
@@ -114,9 +113,8 @@
                             <div class="name">Unggah Izin Usaha</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="foto_izin_usaha" id="file">
                                     <label class="label--file" for="file">Choose file</label>
-                                    <span class="input-file__info">No file chosen</span>
                                 </div>
                                 <div class="label--desc">Upload Foto Izin Usaha dari Kelurahan. Maksimal 50 MB</div>
                             </div>
@@ -125,18 +123,20 @@
                             <div class="name">Unggah NPWP</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="foto_npwp" id="file">
                                     <label class="label--file" for="file">Choose file</label>
-                                    <span class="input-file__info">No file chosen</span>
                                 </div>
                                 <div class="label--desc">Upload Foto NPWP. Maksimal 50 MB</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
+                        </div>
                     </form>
                 </div>
-                <br><button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
-                </div> 
-            </div>             
+                    </div> 
+                </div>             
+            </div>
         </div>
     </div>
 

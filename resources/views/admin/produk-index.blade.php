@@ -6,7 +6,7 @@
 <body>
     <div class="wrapper">
         @include('admin.parts.navbar')
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
                 <a href="#" class="simple-text">
                     Admin
@@ -38,7 +38,7 @@
         <div class="main-panel">
             @include('admin.parts.navbar')
             <div class="content">
-            <a href="{{'produk-create'}}" style="float: left;" class="btn btn-primary waves-effect waves-light m-t-10">
+            <a href="{{'produk-create'}}" style="float: left;" class="btn btn-warning waves-effect waves-light m-t-10">
                 <i class="fa fa-plus" aria-hidden="true"></i>  Produk RPK 
             </a>
                 <div class="container-fluid">
@@ -66,7 +66,7 @@
                                                 <td>{{$listproduk->nama}}</td>
                                                 <td>{{$listproduk->deskripsi}}</td>
                                                 <td>{{$listproduk->harga}}</td>
-                                                <td>{{$listproduk->gambar}}</td>
+                                                <td><img src="{{ url('storage/images2/'.$listproduk->gambar) }}" alt="" title="" /></td>
                                                 <td class="td-actions text-right">
                                                     <a href="{{action('ProdukController@edit', $listproduk->id_produk)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

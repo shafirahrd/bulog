@@ -39,6 +39,39 @@ Route::get('galeri', 'HomeController@galeri');
 Route::get('contact', 'HomeController@contact');
 Route::get('daftar', 'HomeController@daftar');
 Route::get('masuk', 'HomeController@masuk');
+Route::resource('rpk', 'RPKController');
+Route::get('akun-create', 'RPKController@akun_create');
+Route::post('akun-create', 'RPKController@akun_store');
+Route::post('status/{id}', 'RPKController@status_update');
+Route::post('rpk-create', 'RPKController@store');
+Route::get('admin-RPK', 'RPKController@index');
+Route::get('rpk-update/{id}', 'RPKController@edit');
+Route::post('rpk-update/{id}', 'RPKController@update');
+Route::get('rpk-delete/{id}', 'RPKController@delete');
+
+Route::get('/produk', function () {
+    return view('user.produk');
+});
+
+Route::get('/rpk', function () {
+    return view('user.rpk');
+});
+
+Route::get('/galeri', function () {
+    return view('user.galeri');
+});
+
+Route::get('/contact', function () {
+    return view('user.contact');
+});
+
+Route::get('/daftar', function (){
+	return view('user.daftar');
+});
+
+Route::get('/masuk', function (){
+	return view('user.masuk');
+});
 
 //RPK
 Route::get('rpk-dashboard/{id}', 'RPK\DashboardController@index');

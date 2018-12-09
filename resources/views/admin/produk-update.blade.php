@@ -6,7 +6,7 @@
 <body>
     <div class="wrapper">
         @include('admin.parts.navbar')
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
                 <a href="#" class="simple-text">
                     Admin
@@ -47,7 +47,7 @@
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
-                                    <form class="form-horizontal form-material" action="{{action('ProdukController@update', $id)}}" method = "post">
+                                    <form class="form-horizontal form-material" action="{{action('ProdukController@update', $id)}}" method="post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nama</label>

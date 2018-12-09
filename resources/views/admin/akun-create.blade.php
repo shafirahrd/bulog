@@ -43,26 +43,37 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="card">
                                 <div class="card-header" data-background-color="orange">
-                                    <h4 class="title">Tambah Galeri Foto RPK</h4>
+                                    <h4 class="title">Tambah Akun RPK</h4>
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
-                                    <form class="form-horizontal form-material" action="{{'galeri-create'}}" method= "post" enctype="multipart/form-data">
+                                    <form class="form-horizontal form-material" action="{{'akun-create'}}" method= "post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         <div class="form-group">
-                                            <label class="col-sm-3 control-label">Nama</label>
+                                        <label class="col-sm-3 control-label">Id RPK</label>
                                              <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="Nama" name="nama">
+                                                 <select class="selectpicker m-b-20" data-style="form-control" name="id_rpk">
+                                                    @foreach ($rpk as $listrpk)
+                                                        <option value="{{$listrpk->id_rpk}}">{{$listrpk->id_rpk}}</option>
+                                                    @endforeach
+                                                 </select>
+                                             </div>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">Username</label>
+                                             <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Username" name="username">
                                              </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputEmail3" class="col-sm-3 control-label">Gambar</label>
-                                            <div class="col-sm-9">
-                                                <input type="file" class="form-control" name="gambar">
-                                            </div>
+                                            <label class="col-sm-3 control-label">Password</label>
+                                             <div class="col-sm-9">
+                                                <input type="password" class="form-control" placeholder="Password" name="password">
+                                             </div>
                                         </div>
                                         <div class="form-group m-b-0">
-                                           <a href="{{'admin-galeri'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
+                                           <a href="{{'admin-rpk'}}" style="float: right;" class="btn btn-primary waves-effect waves-light m-t-10">Keluar</a>
                                            <button type="submit" style="float: right;" class="btn btn-danger waves-effect waves-light m-t-10">Simpan</button>
                                         </div>
                                      </form>
