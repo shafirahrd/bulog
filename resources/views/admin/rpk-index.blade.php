@@ -38,8 +38,8 @@
         <div class="main-panel">
             @include('admin.parts.navbar')
             <div class="content" data-color="orange">
-            <a href="{{'produk-create'}}" style="float: left;" class="btn btn-warning waves-effect waves-light m-t-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>  Pendaftar RPK 
+            <a href="{{'akun-create'}}" style="float: left;" class="btn btn-warning waves-effect waves-light m-t-10">
+                <i class="fa fa-plus" aria-hidden="true"></i>  Akun RPK 
             </a>
                 <div class="container-fluid">
                     <div class="row">
@@ -77,7 +77,7 @@
                                                 <td>{{$listrpk->nomor_hp}}</td>
                                                 <td>{{$listrpk->email}}</td>
                                                 <!-- <td><img src="{{ url('storage/images3/'.$listrpk->gambar) }}" alt="" title="" /></td> -->
-                                                <td class="td-actions text-right">
+                                                <!-- <td class="td-actions text-right">
                                                     <a href="{{action('RPKController@edit', $listrpk->id_rpk)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                     </a>
@@ -85,7 +85,7 @@
                                                         {{ csrf_field() }}
                                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                                     </form>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         @endforeach
                                         </tbody>

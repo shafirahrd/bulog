@@ -32,7 +32,8 @@ Route::post('produk-update/{id}', 'ProdukController@update');
 Route::get('produk-delete/{id}', 'ProdukController@delete');
 
 Route::resource('rpk', 'RPKController');
-Route::get('rpk-create', 'RPKController@create');
+Route::get('akun-create', 'RPKController@akun_create');
+Route::post('akun-create', 'RPKController@akun_store');
 Route::post('status/{id}', 'RPKController@status_update');
 Route::post('rpk-create', 'RPKController@store');
 Route::get('admin-RPK', 'RPKController@index');
