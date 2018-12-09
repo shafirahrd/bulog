@@ -116,6 +116,7 @@
                                             <th>Kode Pos</th>
                                             <th>Nomer HP</th>
                                             <th>Email</th>
+                                            <th>Aksi</th>
                                         </thead>
                                         <tbody>
                                         @foreach($rpk->where('status','=',0)->sortBy('id_rpk') as $listrpk)
