@@ -41,7 +41,7 @@ Route::get('daftar', 'HomeController@daftar');
 Route::get('masuk', 'HomeController@masuk');
 
 //RPK
-Route::get('rpk-dashboard', 'RPK\DashboardController@index');
+Route::get('rpk-dashboard/{id}', 'RPK\DashboardController@index');
 
 Route::get('rpk-profil/{id}', 'RPK\ProfilController@index');
 Route::post('rpk-profil-update/{id}', 'RPK\ProfilController@update');
@@ -52,5 +52,5 @@ Route::post('rpk-komoditas-add', 'RPK\KomoditasController@insert');
 Route::get('rpk-komoditas-add/{id}', 'RPK\KomoditasController@edit');
 Route::post('rpk-komoditas-update/{id}', 'RPK\KomoditasController@update');
 
-
 Route::get('rpk-laporan', 'RPK\LaporanController@index');
+Route::post('rpk-laporan-add', 'RPK\LaporanController@insert');

@@ -49,12 +49,11 @@
             </ul>
     	</div>
     </div>
-
     <div class="main-panel">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Dashboard RPK Laku Jaya</a>
+                    <a class="navbar-brand">Dashboard RPK {{$rpk[0]->nama_toko}}</a>
                 </div>
             </div>
         </nav>
@@ -74,8 +73,8 @@
                                     </div>
                                     <div class="col-xs-9">
                                         <div class="numbers" style="text-align: left;">
-                                            <p>Minggu, 9 Desember 2018</p>
-                                            Rp 1.000.000,-
+                                            <p>{{$catatan[0]->created_at}}</p>
+                                            Rp {{$last[0]->total}},-
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +99,7 @@
                                     <div class="col-xs-9">
                                         <div class="numbers" style="text-align: left;"">
                                             <p>Sisa Komoditas</p>
-                                            Beras 5Kg : 10 Karung
+                                            {{$komoditas[0]->nama}} : {{$komoditas[0]->jumlah}}
                                         </div>
                                     </div>
                                 </div>
@@ -140,8 +139,6 @@
                 </div>
             </div>
         </div>
-
-
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright pull-right">
@@ -149,11 +146,8 @@
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
-
-
-</body>
 	@include('rpk.parts.foot')
+</body>
 </html>

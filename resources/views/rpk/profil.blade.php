@@ -91,7 +91,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Username</label>
-                                                <input type="text" name="username" class="form-control border-input" placeholder="Username" value="{{$username->username}}">
+                                                <input type="text" name="username" class="form-control border-input" disabled placeholder="Username" value="{{$username->username}}">
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@
                                     	<div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Kota/Kabupaten</label>
-                                                <input type="text" name="kota" class="form-control border-input" placeholder="Kota/Kabupaten" value="{{$profil->kota_kabupaten}}">
+                                                <input type="text" name="kota_kabupaten" class="form-control border-input" placeholder="Kota/Kabupaten" value="{{$profil->kota_kabupaten}}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

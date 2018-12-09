@@ -54,7 +54,7 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Laporan Mingguan RPK Laku Jaya</a>
+                    <a class="navbar-brand">Laporan Mingguan RPK</a>
                 </div>
             </div>
         </nav>
@@ -67,22 +67,22 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Laporan</h4>
-                                <p class="category">Laporan mingguan produk dilakukan dengan update jumlah komoditas di halaman <a href="{{ url('rpk-komoditas') }}">Komoditas</a>. Mengisi halaman ini apabila ada keterangan terkait penjualan produk RPK.</p>
+                                <p class="category">Laporan mingguan produk dilakukan dengan update jumlah komoditas di halaman <a href="{{ url('rpk-komoditas/1') }}">Komoditas</a>. Mengisi halaman ini apabila ada keterangan terkait penjualan produk RPK.</p>
                             </div>
                             <div class="content">
-                                <form method="POST">
+                                <form method="POST" action ="{{ action('RPK\LaporanController@insert') }}">
                                 	{{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea rows="5" class="form-control border-input" placeholder="Masukkan keterangan" value="laporan">Penjualan hari ini lebih ramai dibandingkan sebelumnya.
-Tidak ada kendala kecuali terjadi beberapa kali inspeksi oleh kepolisian daerah.
-Aman bosqu</textarea>
+                                                <textarea rows="5" class="form-control border-input" placeholder="Masukkan keterangan" name="catatan"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Kirim Laporan</button>
                                     </div>
                                 </form>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Kirim Laporan</button>
-                                </div>
                             </div>
                         </div>
                     </div>

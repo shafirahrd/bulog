@@ -19,20 +19,3 @@
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{{ asset('rpk/js/demo.js') }}"></script>
-
-	<script type="text/javascript">
-    	$(document).ready(function(){
-
-        	demo.initChartist();
-
-        	$.notify({
-            	icon: 'ti-gift',
-            	message: "Selamat datang kembali, Sahabat RPK! Jangan lupa untuk laporan mingguan"
-
-            },{
-                type: 'success',
-                timer: 4000
-            });
-
-    	});
-	</script>
