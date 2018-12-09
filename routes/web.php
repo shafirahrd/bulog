@@ -43,8 +43,9 @@ Route::get('masuk', 'HomeController@masuk');
 //RPK
 Route::get('rpk-dashboard', 'RPK\DashboardController@index');
 
-Route::get('rpk-profil', 'RPK\ProfilController@index');
+Route::get('rpk-profil/{id}', 'RPK\ProfilController@index');
 
-Route::get('rpk-komoditas', 'RPK\KomoditasController@index');
+Route::get('rpk-komoditas/{id}', 'RPK\KomoditasController@index');
+Route::get('rpk-komoditas-add', 'RPK\KomoditasController@add');
 
 Route::get('rpk-laporan', 'RPK\LaporanController@index');

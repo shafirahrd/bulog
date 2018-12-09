@@ -49,12 +49,12 @@
             </ul>
     	</div>
     </div>
-
+    @foreach ($profil as $profil)
     <div class="main-panel">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Profil RPK Laku Jaya</a>
+                    <a class="navbar-brand">Profil RPK {{$profil->nama_toko}}</a>
                 </div>
             </div>
         </nav>
@@ -66,31 +66,32 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title"><center>RPK LAKU JAYA</center></h4><hr>
+                                <h4 class="title"><center>RPK {{$profil->nama_toko}}</center></h4><hr>
                             </div>
                             <div class="content">
                             	<div class="icon-big icon-warning text-center">
                                     <i class="ti-user"></i>
-                                <div>
+                                </div>
                                 <form method="POST">
                                 	{{ csrf_field() }}
+                                    @foreach ($username as $username)
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Nama Toko</label>
-                                                <input type="text" name="namatoko" class="form-control border-input" disabled placeholder="Nama Toko" value="Laku Jaya">
+                                                <input type="text" name="namatoko" class="form-control border-input" disabled placeholder="Nama Toko" value="{{$profil->nama_toko}}">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Pengelola Toko</label>
-                                                <input type="text" name="pemiliktoko" class="form-control border-input" placeholder="Pengelola Toko" value="Anindya Hantari">
+                                                <input type="text" name="pemiliktoko" class="form-control border-input" placeholder="Pengelola Toko" value="{{$profil->pemilik_toko}}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Username</label>
-                                                <input type="text" name="username" class="form-control border-input" placeholder="Username" value="hantariendel">
+                                                <input type="text" name="username" class="form-control border-input" placeholder="Username" value="{{$username->username}}">
                                             </div>
                                         </div>
                                     </div>
@@ -99,13 +100,13 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>No. KTP</label>
-                                                <input type="text" name="ktp" class="form-control border-input" placeholder="Nomor KTP" value="6474120419961004">
+                                                <input type="text" name="ktp" class="form-control border-input" placeholder="Nomor KTP" value="{{$profil->ktp}}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>No. NPWP</label>
-                                                <input type="text" name="npwp" class="form-control border-input" placeholder="Nomor NPWP" value="4001699140214764">
+                                                <input type="text" name="npwp" class="form-control border-input" placeholder="Nomor NPWP" value="{{$profil->npwp}}">
                                             </div>
                                         </div>
                                     </div>
@@ -114,7 +115,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Alamat</label>
-                                                <input type="text" name="alamat" class="form-control border-input" placeholder="Alamat Lengkap" value="Malang, Indonesia">
+                                                <input type="text" name="alamat" class="form-control border-input" placeholder="Alamat Lengkap" value="{{$profil->alamat}}">
                                             </div>
                                         </div>
                                     </div>
@@ -122,25 +123,33 @@
                                     	<div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Kota/Kabupaten</label>
-                                                <input type="text" name="kota" class="form-control border-input" placeholder="Kota/Kabupaten" value="Malang">
+                                                <input type="text" name="kota" class="form-control border-input" placeholder="Kota/Kabupaten" value="{{$profil->kota_kabupaten}}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Kode Pos</label>
-                                                <input type="text" name="kodepos" class="form-control border-input" placeholder="Kode Pos" value="64022">
+                                                <input type="text" name="kodepos" class="form-control border-input" placeholder="Kode Pos" value="{{$profil->kode_pos}}">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Email</label>
-                                                <input type="email" name="email" class="form-control border-input" placeholder="Email" value="anindyahantari@gmail.com">
+                                                <input type="email" name="email" class="form-control border-input" placeholder="Email" value="{{$profil->email}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>No. HP</label>
+                                                <input type="text" name="nohp" class="form-control border-input" placeholder="Nomor Handphone" value="{{$profil->nomor_hp}}">
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
+                                    @endforeach
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
                                     </div>
@@ -153,7 +162,6 @@
             </div>
         </div>
 
-
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright pull-right">
@@ -161,7 +169,6 @@
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
 
