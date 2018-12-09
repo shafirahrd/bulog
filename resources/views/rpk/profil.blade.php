@@ -17,19 +17,19 @@
 
             <ul class="nav">
                 <li>
-                    <a href="{{ url('rpk-dashboard') }}">
+                    <a href="{{ url('rpk-dashboard/1') }}">
                         <i class="ti-panel"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li class="active">
-                    <a href="{{ url('rpk-profil')}}">
+                    <a href="{{ url('rpk-profil/1')}}">
                         <i class="ti-user"></i>
                         <p>Profil RPK</p>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('rpk-komoditas')}}">
+                    <a href="{{ url('rpk-komoditas/1')}}">
                         <i class="ti-view-list-alt"></i>
                         <p>Komoditas</p>
                     </a>
