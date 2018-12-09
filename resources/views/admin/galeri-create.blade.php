@@ -47,7 +47,7 @@
                                     <p class="category"></p>
                                 </div>
                                 <div class="card-content table-responsive">
-                                    <form class="form-horizontal form-material" action="{{'galeri-create'}}" method = "post">
+                                    <form class="form-horizontal form-material" action="{{'galeri-create'}}" method= "post" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label class="col-sm-3 control-label">Nama</label>

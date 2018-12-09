@@ -62,7 +62,7 @@
                                             <tr>
                                                 <td>{{$listgaleri->id_galeri}}</td>
                                                 <td>{{$listgaleri->nama}}</td>
-                                                <td>{{$listgaleri->gambar}}</td>
+                                                <td><img src="{{ url('storage/images1/'.$listgaleri->gambar) }}" alt="" title="" /></td>
                                                 <td class="td-actions text-right">
                                                     <a href="{{action('GaleriController@edit', $listgaleri->id_galeri)}}" class="btn btn-primary btn-warning btn-xs" sstyle="margin-right:5px"">
                                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

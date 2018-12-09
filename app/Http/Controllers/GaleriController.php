@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Galeri;
 use DB;
 
@@ -24,7 +25,12 @@ class GaleriController extends Controller
     {
         $galeri = new Galeri();
         $galeri->nama = $request->get('nama');
-        $galeri->gambar = $request->get('gambar');
+        if ($request->hasFile('gambar')) {
+            $galeri->gambar = $request->gambar->getClientOriginalName();
+            $request->gambar->storeAs('public/images1', $galeri->gambar);
+        } else {
+            $galeri->gambar = 'Gambar tidak ditemukan';
+        }
         $galeri->save();
 
         return redirect('admin-galeri')->with('success', 'Galeri Foto RPK berhasil ditambahkan');
@@ -39,13 +45,24 @@ class GaleriController extends Controller
 
     public function update(Request $request, $id)
     {
-        DB::table('galeri')->where('id_galeri', $id)->update($request->all());
+        $galeri = Galeri::find($id);
+        Storage::delete('public/images1/'.$galeri->gambar);
+        $galeri->nama = $request->get('nama');
+        if ($request->hasFile('gambar')) {
+            $galeri->gambar = $request->gambar->getClientOriginalName();
+            $request->gambar->storeAs('public/images1', $galeri->gambar);
+        } else {
+            $galeri->gambar = 'Gambar tidak ditemukan';
+        }
+        $galeri->save();
 
         return redirect('admin-galeri')->with('success', 'Galeri Foto RPK berhasil diperbarui');
     }
 
     public function delete(Request $request, $id)
     {
+        $galeri = DB::table('galeri')->where('id_galeri', $id)->first();
+        Storage::delete('public/images1/'.$galeri->gambar);
         DB::table('galeri')->where('id_galeri', $id)->delete();
 
         return redirect('admin-galeri')->with('success', 'Galeri Foto RPK telah dihapus');
