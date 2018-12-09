@@ -31,6 +31,15 @@ Route::get('produk-update/{id}', 'ProdukController@edit');
 Route::post('produk-update/{id}', 'ProdukController@update');
 Route::get('produk-delete/{id}', 'ProdukController@delete');
 
+Route::resource('rpk', 'RPKController');
+Route::get('rpk-create', 'RPKController@create');
+Route::post('status/{id}', 'RPKController@status_update');
+Route::post('rpk-create', 'RPKController@store');
+Route::get('admin-RPK', 'RPKController@index');
+Route::get('rpk-update/{id}', 'RPKController@edit');
+Route::post('rpk-update/{id}', 'RPKController@update');
+Route::get('rpk-delete/{id}', 'RPKController@delete');
+
 //Route::get('/about', 'HomeController@about');
 Route::get('/about', function () {
     return view('user.about');
@@ -52,27 +61,27 @@ Route::get('/contact', function () {
     return view('user.contact');
 });
 
-Route::get('/daftar', function (){
-	return view('user.daftar');
+Route::get('/daftar', function () {
+    return view('user.daftar');
 });
 
-Route::get('/masuk', function (){
-	return view('user.masuk');
+Route::get('/masuk', function () {
+    return view('user.masuk');
 });
 
 //RPK
-Route::get('/rpk-dashboard', function (){
-	return view('rpk.dashboard');
+Route::get('/rpk-dashboard', function () {
+    return view('rpk.dashboard');
 });
 
-Route::get('/rpk-profil', function (){
-	return view('rpk.profil');
+Route::get('/rpk-profil', function () {
+    return view('rpk.profil');
 });
 
-Route::get('/rpk-komoditas', function (){
-	return view('rpk.komoditas');
+Route::get('/rpk-komoditas', function () {
+    return view('rpk.komoditas');
 });
 
-Route::get('/rpk-laporan', function (){
-	return view('rpk.laporan');
+Route::get('/rpk-laporan', function () {
+    return view('rpk.laporan');
 });

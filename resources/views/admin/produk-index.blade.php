@@ -6,7 +6,7 @@
 <body>
     <div class="wrapper">
         @include('admin.parts.navbar')
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
                 <a href="#" class="simple-text">
                     Admin
@@ -38,7 +38,7 @@
         <div class="main-panel">
             @include('admin.parts.navbar')
             <div class="content">
-            <a href="{{'produk-create'}}" style="float: left;" class="btn btn-primary waves-effect waves-light m-t-10">
+            <a href="{{'produk-create'}}" style="float: left;" class="btn btn-warning waves-effect waves-light m-t-10">
                 <i class="fa fa-plus" aria-hidden="true"></i>  Produk RPK 
             </a>
                 <div class="container-fluid">

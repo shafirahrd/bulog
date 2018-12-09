@@ -6,7 +6,7 @@
 <body>
     <div class="wrapper">
         @include('admin.parts.navbar')
-        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="blue" data-image="../assets/img/sidebar-1.jpg">
             <div class="logo">
                 <a href="#" class="simple-text">
                     Admin
