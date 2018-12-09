@@ -53,18 +53,10 @@ Route::get('/masuk', function (){
 });
 
 //RPK
-Route::get('/rpk-dashboard', function (){
-	return view('rpk.dashboard');
-});
+Route::get('rpk-dashboard', 'RPK\DashboardController@index');
 
-Route::get('/rpk-profil', function (){
-	return view('rpk.profil');
-});
+Route::get('rpk-profil', 'RPK\ProfilController@index');
 
-Route::get('/rpk-komoditas', function (){
-	return view('rpk.komoditas');
-});
+Route::get('rpk-komoditas', 'RPK\KomoditasController@index');
 
-Route::get('/rpk-laporan', function (){
-	return view('rpk.laporan');
-});
+Route::get('rpk-laporan', 'RPK\LaporanController@index');

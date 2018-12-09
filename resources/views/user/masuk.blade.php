@@ -32,6 +32,7 @@
                 		</div>
                 	</div>
                     <form method="POST">
+                    	{{ csrf_field() }}
                         <div class="form-row">
                             <div class="name">Username</div>
                             <div class="value">
