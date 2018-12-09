@@ -74,26 +74,27 @@
                                     </div>
                                 </div>
                             </div>
+                            @foreach($komoditas as $komoditas)
                             <div class="content"><hr>
-                                <form method="POST">
+                                <form method="POST" action="{{ action('RPK\KomoditasController@update', ['id' => $komoditas->id_laporan]) }}">
                                     {{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Nama Produk</label>
-                                                <input type="text" name="jumlah" class="form-control border-input" disabled placeholder="Nama Produk" value="">
+                                                <input type="text" name="nama" class="form-control border-input" disabled placeholder="Nama Produk" value="{{$komoditas->nama}}">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Jumlah</label>
-                                                <input type="text" name="jumlah" class="form-control border-input" placeholder="Jumlah Produk" value="">
+                                                <input type="text" name="jumlah" class="form-control border-input" placeholder="Jumlah Produk" value="{{$komoditas->jumlah}}">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Tipe: belanja/laporan</label>
-                                                <input type="text" name="tipe" class="form-control border-input" placeholder="Tipe Laporan" value="">
+                                                <input type="text" name="tipe" class="form-control border-input" placeholder="Tipe Laporan" value="{{$komoditas->tipe}}">
                                             </div>
                                         </div>
                                     </div>
@@ -103,6 +104,7 @@
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

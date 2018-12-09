@@ -9,7 +9,7 @@ class Komoditas extends Model
     protected $table = 'komoditas';
     protected $primaryKey = 'id_laporan';
     protected $fillable = [
-        'jumlah', 'total', 'tanggal', 'tipe'
+        'id_produk','id_rpk','jumlah', 'tipe'
     ];
     public $incrementing = true;
     public $timestamp = true;

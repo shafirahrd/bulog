@@ -16,4 +16,11 @@ class ProfilController extends Controller
 
     	return view('rpk.profil', ['profil'=>$profil, 'username'=>$username]);
     }
+
+    public function update(Request $request, $id)
+    {
+    	DB::table('rpk')->where('id_rpk', $id)->update($request->except(['_token']));
+
+        return redirect('rpk-profil/1');
+    }
 }

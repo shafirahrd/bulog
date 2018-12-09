@@ -72,20 +72,20 @@
                             	<div class="icon-big icon-warning text-center">
                                     <i class="ti-user"></i>
                                 </div>
-                                <form method="POST">
+                                <form method="POST" action="{{ action('RPK\ProfilController@update', ['id' => $profil->id_rpk]) }}">
                                 	{{ csrf_field() }}
                                     @foreach ($username as $username)
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Nama Toko</label>
-                                                <input type="text" name="namatoko" class="form-control border-input" disabled placeholder="Nama Toko" value="{{$profil->nama_toko}}">
+                                                <input type="text" name="nama_toko" class="form-control border-input" disabled placeholder="Nama Toko" value="{{$profil->nama_toko}}">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Pengelola Toko</label>
-                                                <input type="text" name="pemiliktoko" class="form-control border-input" placeholder="Pengelola Toko" value="{{$profil->pemilik_toko}}">
+                                                <input type="text" name="pemilik_toko" class="form-control border-input" placeholder="Pengelola Toko" value="{{$profil->pemilik_toko}}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -129,7 +129,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Kode Pos</label>
-                                                <input type="text" name="kodepos" class="form-control border-input" placeholder="Kode Pos" value="{{$profil->kode_pos}}">
+                                                <input type="text" name="kode_pos" class="form-control border-input" placeholder="Kode Pos" value="{{$profil->kode_pos}}">
                                             </div>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>No. HP</label>
-                                                <input type="text" name="nohp" class="form-control border-input" placeholder="Nomor Handphone" value="{{$profil->nomor_hp}}">
+                                                <input type="text" name="nomor_hp" class="form-control border-input" placeholder="Nomor Handphone" value="{{$profil->nomor_hp}}">
                                             </div>
                                         </div>
                                     </div>

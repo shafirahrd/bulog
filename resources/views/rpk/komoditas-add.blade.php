@@ -59,7 +59,6 @@
             </div>
         </nav>
 
-
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -68,38 +67,41 @@
                             <div class="header">
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <h4 class="title">Komoditas</h4>
-                                        <p class="category">Jumlah komoditas saat ini</p>
+                                        <h4 class="title">Update dan Laporan Penjualan Komoditas RPK</h4>
                                     </div>
                                     <div class="col-md-2">
-                                        <button class="btn btn-warning" style="float:right;"><a href="{{ url('rpk-komoditas-add') }}">Tambah Komoditas</a></button>
+                                        <button class="btn btn-warning" style="float:right;"><a href="{{ url('rpk-komoditas/1') }}">Kembali</a></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <th>Nomor</th>
-                                    	<th>Produk</th>
-                                    	<th>Jumlah</th>
-                                    	<th>Harga</th>
-                                    	<th>Action</th>
-                                    </thead>
-                                    <tbody>
-                                    <?php $x=1; ?>
-                                    @foreach($komoditas as $komoditas)
-                                        <tr>
-                                        	<td><?php echo $x; $x=$x+1; ?></td>
-                                        	<td>{{$komoditas->nama}}</td>
-                                        	<td>{{$komoditas->jumlah}}</td>
-                                        	<td>{{$komoditas->harga}}</td>
-                                        	<td>
-                                            <button class="btn btn-warning"><a href="{{ action('RPK\KomoditasController@edit', ['id' => $komoditas->id_laporan]) }}">Edit</a></button>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                    </tbody>
-                                </table>
+                            <div class="content"><hr>
+                                <form method="POST" action="{{ action('RPK\KomoditasController@insert') }}">
+                                    {{ csrf_field() }}
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Nama Produk</label>
+                                                <input type="text" name="nama" class="form-control border-input" placeholder="Nama Produk">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Jumlah</label>
+                                                <input type="text" name="jumlah" class="form-control border-input" placeholder="Jumlah Produk">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Tipe: belanja/laporan</label>
+                                                <input type="text" name="tipe" class="form-control border-input" placeholder="Tipe Laporan">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Tambah Komoditas</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </form>
                             </div>
                         </div>
                     </div>
