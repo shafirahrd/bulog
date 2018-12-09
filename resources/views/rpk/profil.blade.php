@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ url('')}}">
                         <i class="ti-pencil-alt2"></i>
                         <p>Log Out</p>
                     </a>
@@ -72,7 +72,8 @@
                             	<div class="icon-big icon-warning text-center">
                                     <i class="ti-user"></i>
                                 <div>
-                                <form>
+                                <form method="POST">
+                                	{{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
@@ -110,10 +111,18 @@
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Alamat</label>
                                                 <input type="text" name="alamat" class="form-control border-input" placeholder="Alamat Lengkap" value="Malang, Indonesia">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    	<div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Kota/Kabupaten</label>
+                                                <input type="text" name="kota" class="form-control border-input" placeholder="Kota/Kabupaten" value="Malang">
                                             </div>
                                         </div>
                                         <div class="col-md-6">

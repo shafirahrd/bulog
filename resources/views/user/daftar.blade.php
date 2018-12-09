@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="css/daftar.css" rel="stylesheet" media="all">
+    <link href="{{ asset('css/daftar.css') }}" rel="stylesheet" media="all">
 </head>
 
 <body class="single-page about-page">
@@ -28,6 +28,7 @@
                 <div class="col-12 col-lg-8">
                     <div class="news-content">
                        <form method="POST">
+                       	{{ csrf_field() }}
                         <div class="form-row">
                             <div class="name">KTP</div>
                             <div class="value">
@@ -63,6 +64,14 @@
                             <div class="value">
                                 <div class="input-group">
                                     <textarea class="textarea--style-6" name="alamat" placeholder="Alamat Lengkap"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Kota/Kabupaten</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="kota" placeholder="Kota/Kabupaten"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -125,12 +134,9 @@
                         </div>
                     </form>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
-                </div>
-                    </div> 
-                </div>             
-            </div>
+                <br><button class="btn btn-warning" style="float:right;" type="submit">Kirim</button>
+                </div> 
+            </div>             
         </div>
     </div>
 

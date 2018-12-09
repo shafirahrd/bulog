@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
     <!-- ElegantFonts CSS -->
-    <link rel="stylesheet" href="css/elegant-fonts.css">
+    <link rel="stylesheet" href="{{ asset('css/elegant-fonts.css') }}">
 
     <!-- themify-icons CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="{{ asset('css/swiper.min.css') }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <body class="single-page about-page">
 	<header class="site-header">
     
@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2><a class="foot-logo" href="#"><img src="images/logo.png" alt="" width="250"></a></h2>
+                            <h2><a class="foot-logo" href="#"><img src="{{ asset('images/logo.png') }}" alt="" width="250"></a></h2>
 
                             <p>Pemasaran BULOG Divisi Regional Jawa Timur</p>
 
@@ -74,12 +74,12 @@
             
     </footer><!-- .site-footer -->
 
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
-    <script type='text/javascript' src='js/circle-progress.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
-    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.collapsible.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/swiper.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.countdown.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/circle-progress.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.countTo.min.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/jquery.barfiller.js') }}"></script>
+    <script type='text/javascript' src="{{ asset('js/custom.js') }}"></script>
 </html>

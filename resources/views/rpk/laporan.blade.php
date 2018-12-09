@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ url('')}}">
                         <i class="ti-pencil-alt2"></i>
                         <p>Log Out</p>
                     </a>
@@ -70,7 +70,8 @@
                                 <p class="category">Laporan mingguan produk dilakukan dengan update jumlah komoditas di halaman <a href="{{ url('rpk-komoditas') }}">Komoditas</a>. Mengisi halaman ini apabila ada keterangan terkait penjualan produk RPK.</p>
                             </div>
                             <div class="content">
-                                <form>
+                                <form method="POST">
+                                	{{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">

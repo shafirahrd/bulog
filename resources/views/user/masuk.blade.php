@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="css/daftar.css" rel="stylesheet" media="all">
+    <link href="{{ asset('css/daftar.css') }}" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -26,7 +26,13 @@
                     <h2 class="title">Masuk Akun RPK</h2>
                 </div>
                 <div class="card-body">
+                	<div class="row">
+                		<div class="col-md-11">
+                			<a class="d-block" href="index.php" rel="home"><img class="d-block" src="{{ asset('images/logo.png') }}" width="200" style="float:right;" alt="logo"></a>
+                		</div>
+                	</div>
                     <form method="POST">
+                    	{{ csrf_field() }}
                         <div class="form-row">
                             <div class="name">Username</div>
                             <div class="value">

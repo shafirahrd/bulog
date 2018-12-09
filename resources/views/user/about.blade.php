@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +63,7 @@
 
                 <div class="col-12 col-md-6 offset-lg-2 col-lg-5">
                     
-                  <img src=images/22.jpg width="550" height="552">
+                  <img src="{{ asset('images/22.jpg') }}" width="550" height="552">
 
                         
               </div>

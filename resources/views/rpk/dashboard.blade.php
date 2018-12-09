@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ url('')}}">
                         <i class="ti-pencil-alt2"></i>
                         <p>Log Out</p>
                     </a>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="col-xs-9">
                                         <div class="numbers" style="text-align: left;">
-                                            <p>Hari Minggu, 9 Desember 2018</p>
+                                            <p>Minggu, 9 Desember 2018</p>
                                             Rp 1.000.000,-
                                         </div>
                                     </div>

@@ -10,7 +10,7 @@
 <div class="swiper-container hero-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide hero-content-wrap">
-                <img src="images/hero-bg3.jpg" >
+                <img src="{{ asset('images/hero-bg3.jpg') }}" >
 
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
@@ -34,7 +34,7 @@
             </div><!-- .hero-content-wrap -->
 
             <div class="swiper-slide hero-content-wrap">
-                <img src="images/home-bg3.jpg"  >
+                <img src="{{ asset('images/home-bg3.jpg') }}"  >
 
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
@@ -60,7 +60,7 @@
             </div><!-- .hero-content-wrap -->
 
             <div class="swiper-slide hero-content-wrap">
-                <img src="images/home-bg4.jpg" alt="">
+                <img src="{{ asset('images/home-bg4.jpg') }}" alt="">
 
                 <div class="hero-content-overlay position-absolute w-100 h-100">
                     <div class="container h-100">
@@ -124,7 +124,7 @@
                 </div><!-- .col -->
 
                 <div class="col-12 col-lg-6 mt-4 order-1 order-lg-2">
-                    <img src="images/logo.png" alt="welcome">
+                    <img src="{{ asset('images/logo.png') }}" alt="welcome">
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
@@ -141,7 +141,7 @@
 
                         <div class="event-wrap d-flex flex-wrap justify-content-between">
                             <figure class="m-0">
-                                <img src="images/home1.jpeg" alt="">
+                                <img src="{{ asset('images/home1.jpeg') }}" alt="">
                             </figure>
 
                             <div class="event-content-wrap">
@@ -169,7 +169,7 @@
 
                         <div class="event-wrap d-flex flex-wrap justify-content-between">
                             <figure class="m-0">
-                                <img src="images/home2.jpg" alt="">
+                                <img src="{{ asset('images/home2.jpg') }}" alt="">
                             </figure>
 
                             <div class="event-content-wrap">
@@ -180,7 +180,7 @@
 
                         <div class="event-wrap d-flex flex-wrap justify-content-between">
                             <figure class="m-0">
-                                <img src="images/home3.jpg" alt="">
+                                <img src="{{ asset('images/home3.jpg') }}" alt="">
                             </figure>
                             <hr>
                             <br/><br/>
@@ -218,7 +218,7 @@
 
                         <div class="cause-wrap d-flex flex-wrap justify-content-between">
                             <figure class="m-0">
-                                <img src="images/5.jpg" alt="">
+                                <img src="{{ asset('images/5.jpg') }}" alt="">
                             </figure>
 
                             <div class="cause-content-wrap">
@@ -263,7 +263,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/1.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/1.jpg') }}" alt="">
                                         
                                     </figure>
 
@@ -287,7 +287,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/2.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/2.jpg') }}" alt="">
 
                                     </figure>
 
@@ -309,7 +309,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/3.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/3.jpg') }}" alt="">
  
                                     </figure>
 
@@ -332,7 +332,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/1.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/1.jpg') }}" alt="">
                                         
                                     </figure>
 
@@ -356,7 +356,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/2.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/2.jpg') }}" alt="">
 
                                     </figure>
 
@@ -378,7 +378,7 @@
                             <div class="swiper-slide">
                                 <div class="cause-wrap">
                                     <figure class="m-0">
-                                        <img src="images/testimoni/3.jpg" alt="">
+                                        <img src="{{ asset('images/testimoni/3.jpg') }}" alt="">
  
                                     </figure>
 
@@ -434,15 +434,5 @@
     </div><!-- .our-causes -->
 
     @extends('layouts.footer')
-
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
-    <script type='text/javascript' src='js/circle-progress.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
-    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
-
 </body>
 </html>
