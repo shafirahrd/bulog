@@ -31,34 +31,14 @@ Route::get('produk-update/{id}', 'ProdukController@edit');
 Route::post('produk-update/{id}', 'ProdukController@update');
 Route::get('produk-delete/{id}', 'ProdukController@delete');
 
-//Route::get('/about', 'HomeController@about');
-Route::get('/about', function () {
-    return view('user.about');
-});
-
-Route::get('/produk', function () {
-    return view('user.produk');
-});
-
-Route::get('/rpks', function () {
-    return view('user.rpk');
-});
-
-Route::get('/galeri', function () {
-    return view('user.galeri');
-});
-
-Route::get('/contact', function () {
-    return view('user.contact');
-});
-
-Route::get('/daftar', function (){
-	return view('user.daftar');
-});
-
-Route::get('/masuk', function (){
-	return view('user.masuk');
-});
+//HOME User
+Route::get('about', 'HomeController@about');
+Route::get('produk', 'HomeController@produk');
+Route::get('rpks', 'HomeController@rpks');
+Route::get('galeri', 'HomeController@galeri');
+Route::get('contact', 'HomeController@contact');
+Route::get('daftar', 'HomeController@daftar');
+Route::get('masuk', 'HomeController@masuk');
 
 //RPK
 Route::get('rpk-dashboard', 'RPK\DashboardController@index');
